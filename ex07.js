@@ -231,7 +231,82 @@ console.log(!false);
 
 //암묵적 타입변환
 !0;         //true
-!'Hello'   //false
+!'Hello';    //false
+
+//단축평가
+'Cat' && 'Dog';     //Dog
+
+
+/// 7.6 쉼표 연산자
+
+var x, y, z;
+x = 1, y = 2, z = 3;    //3 : 왼쪽부터 피 연산자를 평가하고 마지막 피 연산자의 평가 결과를 반환한다.
+
+/// 7.7 그룹 연산자
+// () 소괄호를 통해 우선순위 지정
+
+10 * 2 + 3;     //23
+10 * (2 + 3);   //50
+
+
+/// 7.8 typeof 연산자
+
+console.log(typeof '');             //string
+console.log(typeof 1);              //number
+console.log(typeof NaN);            //number
+console.log(typeof true);           //boolean
+console.log(typeof undefined);      //undefined
+console.log(typeof Symbol());       //symbol
+console.log(typeof null);           //object
+console.log(typeof []);             //object
+console.log(typeof {});             //object
+console.log(typeof new Date());     //object
+console.log(typeof /test/gi);       //object
+console.log(typeof function(){});   //function
+
+var foo = null;
+
+console.log(typeof foo === null);   //false
+console.log(foo === null);          //true
+
+// 선언하지 않은 변수에 typeof를 적용한 경우 undefined 반환
+console.log(typeof undecleard);
+
+
+/// 7.9 지수 연산자
+
+console.log(2 ** 2);        //4
+console.log(2 ** 2.5);      //5.656...
+console.log(2 ** 0);        //1
+console.log(2 ** -2);       //0.25
+
+// 지수 연산자가 도입되기 이전에는 Math.pow 연산자를 사용
+console.log(Math.pow(2, 2));
+
+// 3개 이상의 지수를 표현할 때는 Math.pow를 사용하는것이 가독성이 좋다
+console.log(2 ** (3 ** 2));
+console.log(Math.pow(2, Math.pow(3, 2)));
+
+// 음수를 거듭제곱의 밑으로 사용하려면 괄호로 묶어야한다
+//console.log(-5 ** 2);   //syntax err
+console.log((-5) ** 2);
+
+
+// 지수 연산자는 다른 산술 연산자와 마찬가지로 할당 연산자와 함께 사용할 수 있다.
+var num = 5;
+num **= 2       //num = num ** 2  => 25
+
+// 지수 연산자는 이항 연산자 중에서 우선순위가 가장 높다
+2 * 5 ** 2;     //50
+
+/// 7.10 그 외의 연산자
+// 뒤에서 다룸
+
+/// 7.11 연산자의 부수 효과
+/// 7.12 연산자 우선순위
+/// 7.13 연산자 결합 순서
+
+
 
 
 
