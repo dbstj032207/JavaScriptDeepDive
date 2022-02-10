@@ -209,6 +209,29 @@ console.log(result);    //짝수
 //var result = if... 불가
 
 
+/// 7.5 논리 연산자
+
+// 논리합(||) 연산자
+console.log(true || true);      //true
+console.log(true || false);     //true
+console.log(false || true);     //true
+console.log(false || false);    //false
+
+
+// 논리곱(&&) 연산자
+console.log(true && true);      //true
+console.log(true && false);     //false
+console.log(false && true);     //false
+console.log(false && false);    //false
+
+
+//논리 부정(!) 연산자
+console.log(!true);
+console.log(!false);
+
+//암묵적 타입변환
+!0;         //true
+!'Hello'   //false
 
 
 
