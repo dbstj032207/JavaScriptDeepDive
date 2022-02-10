@@ -121,3 +121,62 @@ var a, b, c;
 a = b = c = 0;
 
 console.log(a, b, c);
+
+
+// 7.3 비교연산자
+
+// 동등 비교
+console.log(5 == 5);
+
+// 타입은 다르지만 암묵적 타입 변환을 통해 타입을 일치시키면 동등하다.
+console.log(5 == '5');
+
+// 동등 비교는 결과를 예측하기 어렵다.
+console.log('0' == '');     //false
+console.log(0 == '');       //true
+console.log('0' == 0);      //true
+console.log(false == 'false');      //false
+console.log(false == '0');          //true
+console.log(false == null);         //false
+console.log(false == undefined);    //false
+
+
+// 그렇기 때문에 일치 비교 연산자를 사용한다
+// 암묵적 타입 변환을 하지 않고 값을 비교한다.
+console.log(5 === '5');
+
+
+// NaN은 자신과 일치하지 않는 유일한 값이다.
+console.log(NaN === NaN);       //false
+
+// Number.isNaN()함수
+// ()안의 지정한 값이 NaN인지 판독하는 함수
+// NaN이면 true, 아니면 false를 반환한다.
+console.log(Number.isNaN(10));
+console.log(Number.isNaN(NaN));
+console.log(Number.isNaN(1 + undefined));   //true
+
+
+// 양의 0과 음의 0의 비교
+console.log(0 === -0);      //true
+console.log(0 == -0);       //true
+
+
+// object.is()에서는 구분됨
+console.log(Object.is(0, -0));      //false
+// NaN도 같게 처리함
+console.log(Object.is(NaN, NaN));   //true
+
+
+// 부동등비교 !=
+5 != 8;         //true
+5 != 5;         //false
+5 != '5';       //false
+
+// 불일치비교 !==
+5 !== 8;         //true
+5 !== 5;         //false
+5 !== '5';       //true
+
+// 대소 관계 비교 연산자 >, <, >=, <=
+
