@@ -180,3 +180,36 @@ console.log(Object.is(NaN, NaN));   //true
 
 // 대소 관계 비교 연산자 >, <, >=, <=
 
+
+/// 7.4 삼항 조건 연산자
+
+// 조건식 ? 조건식이 true일때 반환할 값 : 조건식이 false일때 반환할 값
+
+var x = 2;
+
+// 2 % 2는 0 이고 0은 false로 암묵적 타입 변환된다.
+var result = x % 2 ? '홀수' : '짝수';
+
+console.log(result);    //짝수
+
+//if문으로 대체 가능
+if(x % 2){
+    result = '홀수';
+}
+else{
+    result = '짝수';
+}
+
+console.log(result);    //짝수
+
+
+// 하지만 둘의 차이점은 if문은 값처럼 사용할 수 없다는 것이다
+// 선언과 동시에 사용 불가.
+
+//var result = if... 불가
+
+
+
+
+
+
