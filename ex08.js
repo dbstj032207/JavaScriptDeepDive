@@ -186,5 +186,33 @@ while(true){
     }
 }
 
+// do... while문
+count = 0;
 
+// count가 3보다 작을 때까지 코드 블록을 계속 반복 실행한다.
+do {
+    console.log(count);
+    count++;
+} while (count < 3);
+
+// 8.4 break문
+//if (true){
+//    break     //symtax err: if문에서는 break 사용불가
+//}
+
+// 레이블 문: 식별자가 붙은 문
+foo: console.log('foo');
+
+// 레이블 문에서는 break 사용가능
+foo: {
+    console.log(1);
+    break foo;
+    console.log(2);
+}
+
+console.log('Done!');
+
+
+// 8.5 continue문
+// for문 안에 조건식에서 사용하게 되면 해당 문장에서 그 회차의 아랫부분은 건너뛰게 된다.
 
