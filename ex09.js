@@ -49,5 +49,25 @@ console.log(Math + '');
 console.log([] + '');
 console.log([10, 20] + '');
 console.log(function(){} + '');
+console.log(Array + '');
+
+//  9.2.2 숫자 타입으로 변환
+
+// 9.2.3 불리언 타입으로 변환
+
+// 9.3 명시적 타입 변환
+
+// 9.3.1 문자열 타입으로 변환
+// 1. String 생성자 함수를 new 연산자 없이 호출하는 방법
+// 숫자 타입 => 문자열 타입
+String(1);          // "1"
+String(NaN);        // "NaN"
+String(Infinity)    // "Infinity"
+
+// 2. Object.prototype.toSring 메서드를 이용하는 방법
+(1).toString();     // "1"
+//...
+
+// 3. 문자열 연결 연산자를 이용하는 방법
 
 
