@@ -131,3 +131,50 @@ Boolean([]);         // true
 //...
 
 /// 9.4 단축 평가
+
+// 9.4.1 논리 연산자를 사용한 단축 평가
+
+'Cat' && 'Dog';  // Dog
+// && 연산자의 경우 두개가 다 true여야 true를 반환
+// 따라서 앞에 값이 true 이므로 뒤에 값에 따라 결과가 반영되므로 Dog를 반환
+
+console.log('Cat' && 'Dog');
+
+
+'Cat' || 'Dog';     //  'Cat'
+// ||연산자의 경우 둘잘 하나만 true여도 true를 반환하기 때문에 좌항에서 우항으로 평가
+// 좌항인 'Cat'이 true 값이 므로 'Cat'을 반환
+
+// 논리곱 연산자
+console.log('Cat' && 'Dog');        // 'Dog'
+console.log(false && 'Dog');        // false
+console.log('Cat' && false);        // false
+
+// 논리합 연산자
+console.log('Cat' || 'Dog');        // 'Cat'
+console.log(false || 'Dog');        // 'Dog'
+console.log('Cat' || false);        // 'Cat'
+
+
+// 단축평가를 사용하게되면 if문을 대체할 수 있다.
+
+
+var done = true;
+var message = '';
+
+if(done) message = '완료';
+
+message = done && '완료';
+console.log(message);
+
+// 조건이 거짓 값일 때 무언가를 해야한다면 논리 합 연산자 표현식을 사용한다
+
+var done = false;
+var message = '';
+
+
+if(!done) message = '미완료';
+
+message = done || '미완료';
+console.log(message);
+
