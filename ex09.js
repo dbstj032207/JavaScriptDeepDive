@@ -178,3 +178,45 @@ if(!done) message = '미완료';
 message = done || '미완료';
 console.log(message);
 
+// 삼항 조건 연산자는  if...else 문을 대체할 수있다.
+
+// 단축평가는 객체를 사용할때 유용하게 사용된다.
+
+// 9.4.2 옵셔널 체이닝 연산자
+
+//?.
+//좌항의 피 연산자가 null또는 undefined인 경우 undefined를 반환하고, 그렇지 않으면 우항의 프로퍼티 참조를 이어간다.
+
+var elem = null;
+
+var value = elem?.value;
+console.log('value is: ' + value);
+
+
+// elem이 Falsy값이면 elem으로 평가되고, elemm이 Truthy 값이면 elem.value로 평가된다.
+var value = elem && elem.value;
+console.log('value is: ' + value);
+
+var str = '';
+// 좌항이 ''이기 때문에 Falsy값 따라서 str로 평가됨
+var length = str && str.length;
+console.log(length);        // ''길이 참조 불가 
+
+var length = str?.length;
+console.log(length);        // 0
+
+// 9.4.3 null 병합 연산자
+
+//??
+// 좌항의 피 연산자가 null또는 undefined인 경우 우항의 피연산자를 반환하고 그렇지 않으면 좌항의 피연산자를 반환한다.
+// null 변합 연산자 ??는 변수에 기본값을 설정할 때 유용하다.
+
+var foo = null ?? 'default string'
+console.log(foo);       // default string
+
+// 좌항이 Falsy값이라도 null또는 undefined가 아닌경우 좌항을 반환한다.
+var foo = '' ?? 'default string'
+console.log(foo);       // ''
+
+
+
