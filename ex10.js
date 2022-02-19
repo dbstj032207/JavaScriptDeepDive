@@ -61,3 +61,17 @@ var foo = {
 };
 
 console.log(foo);
+
+// 10.4 메서드
+// 메서드는 객체에 묶여 있는 함수를 의미한다.
+
+var circle = {
+    radius: 5,
+    getDiameter: function(){
+        return 2 * this.radius;
+    }
+};
+
+console.log(circle.getDiameter());
+
+
