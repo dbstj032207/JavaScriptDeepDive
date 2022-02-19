@@ -74,4 +74,23 @@ var circle = {
 
 console.log(circle.getDiameter());
 
+// 10.5 프로퍼티 접근
+
+// 프로퍼티에 접근하는 방법
+// 마침표 접근 연산자(.)를 사용하는 마침표 표기법
+// 대괄호 프로퍼티 접근 연산자 ([ ... ])를 사용하는 대괄효 표기법
+
+
+var person = {
+    name: 'Lee'
+};
+
+// 마침표 표기법에 의한 프로퍼티 접근
+console.log(person.name);
+
+// 대괄호 표기법에 의한 프로퍼티 접근
+console.log(person['name']);
+
+// 없는 프로퍼티를 탐색할 경우
+console.log(person.age);
 
