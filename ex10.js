@@ -92,5 +92,9 @@ console.log(person.name);
 console.log(person['name']);
 
 // 없는 프로퍼티를 탐색할 경우
-console.log(person.age);
+console.log(person.age);    //undefined 반환
 
+
+// 
+
+//
