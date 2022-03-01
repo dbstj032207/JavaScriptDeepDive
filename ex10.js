@@ -97,4 +97,22 @@ console.log(person.age);    //undefined 반환
 
 // 
 
-//
+// 10.6 프로퍼티 값 갱신
+
+person.name = 'Kim';
+console.log(person['name']);
+
+
+// 10.7 프로퍼티 동적 생성
+person.age = 20;
+console.log(person);
+
+
+// 10.8 프로퍼티 삭제
+delete person.age;
+
+delete person.address;
+// 프로퍼티 안에 없는 변수지만 에러가 발생하지 않음
+
+
+
